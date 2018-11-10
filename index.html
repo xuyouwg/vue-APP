@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>软谋教育</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <script src="js/vue.js"></script>
+    <script src="js/index2.js"></script>
+<body>
+<!--页面容器-->
+  <div class="index-content" id="my">
+    <div class="banner">
+        <img v-for="(img,index) in imges" :src="img" v-show="index==num"/>
+		<!--<img src="img/banner2.jpg"/>
+		<img src="img/banner3.jpg"/>
+		<img src="img/banner4.jpg"/>
+		<img src="img/banner5.jpg"/>-->
+        <div class="banner-circle">
+            <ul>
+                <li v-for="(img,index) in imges" :class="{'selected':index==num}"></li> 
+				<!--<li></li> 
+				<li></li>  
+				<li></li>  
+				<li></li>  -->
+            </ul> 
+        </div>
+    </div>
+
+    <div class="index-category">
+        <div class="category" v-for="list in lists"><i class="iconfont" v-bind:class="list.icon"></i><label>{{list.title}}</label></div>
+        <!--<div class="category"><i class="iconfont icon-jiaoyu"></i><label>产品介绍</label></div>
+        <div class="category"><i class="iconfont icon-11"></i><label>活动动态</label></div>
+        <div class="category"><i class="iconfont icon-jiazheng"></i><label>限时抢购</label></div>
+        <div class="category"><i class="iconfont icon-jiajujiafang"></i><label>今日秒杀</label></div>
+        <div class="category"><i class="iconfont icon-licai"></i><label>领取优惠</label></div>-->
+
+  </div>
+
+</body>
+</html>
